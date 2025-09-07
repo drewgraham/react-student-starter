@@ -1,0 +1,13 @@
+.footer {
+  background: var(--colour-grey-100);
+  padding: var(--spacing-3);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.footer nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+}

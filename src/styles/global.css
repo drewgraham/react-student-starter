@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--colour-grey-900);
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+}
+
+a {
+  color: var(--colour-accent);
+}
+
+button {
+  font-family: inherit;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--colour-highlight);
+  color: #000;
+  padding: var(--spacing-2);
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+main {
+  padding: var(--spacing-3);
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacing-3);
+}
+
+label {
+  display: block;
+  margin: var(--spacing-2) 0;
+}
+
+input, select, textarea {
+  font-family: inherit;
+  font-size: 1rem;
+}

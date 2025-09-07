@@ -1,0 +1,7 @@
+.tag {
+  background: var(--colour-highlight);
+  color: #000;
+  border-radius: var(--radius-sm);
+  padding: 0 var(--spacing-1);
+  font-size: 0.75rem;
+}
