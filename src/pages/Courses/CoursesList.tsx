@@ -22,7 +22,7 @@ const CoursesList = () => {
     const params = new URLSearchParams();
     if (level) params.append('level', level);
     if (school) params.append('school', school);
-    fetch('/api/courses?' + params.toString())
+    fetch(`${window.location.origin}/api/courses?` + params.toString())
       .then(res => res.json())
       .then(setCourses);
   }, [level, school]);

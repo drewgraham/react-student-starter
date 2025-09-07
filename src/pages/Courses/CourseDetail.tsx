@@ -14,10 +14,10 @@ const CourseDetail = () => {
   const [course, setCourse] = useState<Course | null>(null);
 
   useEffect(() => {
-    fetch('/api/courses')
+    fetch(`${window.location.origin}/api/courses`)
       .then(res => res.json())
-      .then((data) => {
-        const found = data.find((c: any) => c.code === code);
+      .then((data: Course[]) => {
+        const found = data.find(c => c.code === code);
         setCourse(found || null);
       });
   }, [code]);

@@ -16,7 +16,9 @@ const People = () => {
   const [department, setDepartment] = useState('');
 
   useEffect(() => {
-    fetch('/api/people').then(res => res.json()).then(setItems);
+    fetch(`${window.location.origin}/api/people`)
+      .then(res => res.json())
+      .then(setItems);
   }, []);
 
   const filtered = department ? items.filter(p => p.department === department) : items;

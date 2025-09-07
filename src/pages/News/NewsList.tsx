@@ -14,7 +14,9 @@ const NewsList = () => {
   const [page, setPage] = useState(1);
 
   useEffect(() => {
-    fetch('/api/news').then(res => res.json()).then(setItems);
+    fetch(`${window.location.origin}/api/news`)
+      .then(res => res.json())
+      .then(setItems);
   }, []);
 
   const pageSize = 2;

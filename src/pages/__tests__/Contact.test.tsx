@@ -1,7 +1,8 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor, cleanup } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { rest } from 'msw';
 import { setupServer } from 'msw/node';
+import { beforeAll, afterEach, afterAll, test, expect } from 'vitest';
 import Contact from '../Contact';
 
 const server = setupServer(
@@ -9,7 +10,10 @@ const server = setupServer(
 );
 
 beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
+afterEach(() => {
+  server.resetHandlers();
+  cleanup();
+});
 afterAll(() => server.close());
 
 test('validates form fields', async () => {
