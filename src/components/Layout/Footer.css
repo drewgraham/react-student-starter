@@ -3,6 +3,7 @@
   padding: var(--spacing-3);
   font-size: 0.875rem;
   text-align: center;
+  border-top: 1px solid var(--colour-grey-300);
 }
 
 .footer nav {
@@ -10,4 +11,14 @@
   justify-content: center;
   gap: var(--spacing-2);
   margin-bottom: var(--spacing-2);
+}
+
+.footer nav a {
+  color: var(--colour-grey-700);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer nav a:hover {
+  color: var(--colour-primary);
 }
