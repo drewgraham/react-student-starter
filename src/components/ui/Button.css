@@ -1,0 +1,23 @@
+.btn {
+  background: var(--colour-accent);
+  color: white;
+  border: none;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:disabled {
+  background: var(--colour-grey-500);
+  cursor: not-allowed;
+}
+
+.btn:not(:disabled):hover {
+  background: #7a1426;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--colour-highlight);
+  outline-offset: 2px;
+}
