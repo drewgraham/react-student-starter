@@ -1,0 +1,10 @@
+.input {
+  padding: var(--spacing-2);
+  border: 1px solid var(--colour-grey-500);
+  border-radius: var(--radius-sm);
+}
+
+.input:focus {
+  outline: 3px solid var(--colour-highlight);
+  outline-offset: 2px;
+}
