@@ -1,0 +1,13 @@
+.btn {
+  background: var(--colour-accent);
+  color: white;
+  border: none;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background: var(--colour-grey-500);
+  cursor: not-allowed;
+}
