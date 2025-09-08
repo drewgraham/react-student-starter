@@ -1,9 +1,20 @@
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { useState, FormEvent } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setQuery } from '../../store/searchSlice';
 import './Header.css';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [query, setLocalQuery] = useState('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    dispatch(setQuery(query));
+    navigate(`/search?q=${encodeURIComponent(query)}`);
+  };
   return (
     <header className="header">
       <div className="top">
@@ -19,14 +30,19 @@ const Header = () => {
         >
           Menu
         </button>
-        <div className="search">
+        <form className="search" role="search" onSubmit={handleSubmit}>
+          <label className="visually-hidden" htmlFor="global-search">
+            Search
+          </label>
           <input
+            id="global-search"
             type="search"
             placeholder="Search"
             aria-label="Search"
-            disabled
+            value={query}
+            onChange={e => setLocalQuery(e.target.value)}
           />
-        </div>
+        </form>
       </div>
       <nav
         id="primary-nav"

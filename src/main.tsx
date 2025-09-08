@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import { store } from './store';
 import './styles/tokens.css';
+import { logWebVitals } from './utils/webVitals';
 
 if (import.meta.env.DEV) {
   const { worker } = await import('./mocks/browser');
@@ -22,5 +23,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         <App />
       </BrowserRouter>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
+
+logWebVitals();
