@@ -25,13 +25,3 @@ Run unit tests:
 ```bash
 npm test
 ```
-
-## Coding test
-
-Candidate tasks are listed on `/coding-test` and in `public/coding-test.md`.
-
-## Marking criteria
-
-- Code quality and accessibility
-- Test coverage
-- Performance considerations
