@@ -2,7 +2,8 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   color: var(--colour-grey-900);
-  background: #fff;
+  background: linear-gradient(135deg, var(--colour-grey-100), #fff);
+  line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -11,10 +12,27 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   color: var(--colour-accent);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--colour-primary);
 }
 
 button {
   font-family: inherit;
+  background: var(--colour-accent);
+  color: #fff;
+  border: none;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+  background: var(--colour-primary);
 }
 
 .skip-link {
