@@ -8,7 +8,11 @@ import './styles/tokens.css';
 
 if (import.meta.env.DEV) {
   const { worker } = await import('./mocks/browser');
-  worker.start();
+  worker.start({
+    serviceWorker: {
+      url: `${import.meta.env.BASE_URL}mockServiceWorker.js`,
+    },
+  });
 }
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
