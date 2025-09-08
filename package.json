@@ -32,5 +32,8 @@
     "jsdom": "^22.1.0",
     "typescript": "^5.2.0",
     "vitest": "^0.34.0"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
