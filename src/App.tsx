@@ -16,6 +16,7 @@ const CodingTest = lazy(() => import('./pages/CodingTest'));
 const Portal = lazy(() => import('./pages/Portal'));
 const Staff = lazy(() => import('./pages/Staff'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const SearchResults = lazy(() => import('./pages/SearchResults'));
 
 const App = () => (
   <Layout>
@@ -29,6 +30,7 @@ const App = () => (
         <Route path="/news" element={<NewsList />} />
         <Route path="/news/:slug" element={<NewsDetail />} />
         <Route path="/people" element={<People />} />
+        <Route path="/search" element={<SearchResults />} />
         <Route path="/admissions" element={<Admissions />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/coding-test" element={<CodingTest />} />
